@@ -26,7 +26,7 @@ public class TickDto {
 		return timestamp;
 	}
 
-	public synchronized void setTimestamp(Long timeStamp) {
+	public void setTimestamp(Long timeStamp) {
 		this.timestamp = timeStamp;
 	}
 	

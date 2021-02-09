@@ -48,14 +48,14 @@ public class StatisticsServiceImp implements StatisticsService{
 						else if (result<0)
 							return -1;
 						return 0;
-						}), new CopyOnWriteArrayList<QueuedTick>(), new Statistics());
+						}), new CopyOnWriteArrayList<QueuedTick>(), new Statistics(), tick.getInstrument());
 			
 			map.put(tick.getInstrument(), instrument);
 			System.out.println(tick.getTimestamp() + "-" + System.currentTimeMillis());
 		}
 		
 		instrument.addNewTick(tick);
-		scheduler.schedule(new TickProcess(tick.getInstrument(), instrument), new Date(tick.getTimestamp()));
+		scheduler.schedule(new TickProcess(instrument), new Date(tick.getTimestamp()));
 		return true;
 	}
 	

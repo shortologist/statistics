@@ -11,7 +11,7 @@ public Double getAvg() {
 	return avg;
 }
 
-public synchronized void setAvg(Double avg) {
+public void setAvg(Double avg) {
 	this.avg = avg;
 }
 
@@ -19,7 +19,7 @@ public Double getMax() {
 	return max;
 }
 
-public synchronized void setMax(Double max) {
+public void setMax(Double max) {
 	this.max = max;
 }
 
@@ -27,7 +27,7 @@ public Double getMin() {
 	return min;
 }
 
-public synchronized void setMin(Double min) {
+public void setMin(Double min) {
 	this.min = min;
 }
 
